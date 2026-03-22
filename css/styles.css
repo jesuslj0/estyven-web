@@ -57,6 +57,7 @@ iframe {
 
 .section {
   padding: 5.5rem 0;
+  margin-bottom: 2.5rem;
 }
 
 .section-alt {
@@ -127,6 +128,22 @@ iframe {
   align-items: center;
   gap: 0.75rem;
   font-weight: 700;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.brand-logo:hover {
+  box-shadow: var(--shadow-card);
+}
+
+.brand-logo:active {
+  transform: scale(0.95);
+  box-shadow: none;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .brand-mark {
@@ -230,7 +247,7 @@ iframe {
   min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
-  background-image: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80');
+  background-image: url('../assets/img/estyvens-rubia.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -354,6 +371,7 @@ iframe {
   border-radius: 1rem;
   background: rgba(240, 200, 210, 0.12);
   font-size: 1.5rem;
+  color: var(--color-highlight);
 }
 
 .service-card h3,
@@ -404,6 +422,24 @@ iframe {
   min-height: 220px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gallery-item {
+    min-height: 500px;
+  }
+}
+
+.gallery-item > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery-item::after {
@@ -474,6 +510,7 @@ iframe {
   width: 100%;
   height: 100%;
   min-height: 320px;
+  border: 2px solid var(--color-border);
 }
 
 .site-footer {
